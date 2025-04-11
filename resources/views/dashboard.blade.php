@@ -12,7 +12,7 @@
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
-            background-color: #f8fafc;
+            background-color: #bdcbbf;
             margin: 0;
             padding: 0;
         }
@@ -23,7 +23,7 @@
         }
 
         .sidebar {
-            background-color: #1f2937;
+            background-color: #05290e;
             color: white;
             width: 250px;
             padding: 20px;
@@ -48,7 +48,7 @@
         }
 
         .sidebar a:hover {
-            background-color: #374151;
+            background-color: #375140;
             color: white;
         }
 
@@ -84,7 +84,7 @@
             position: fixed;
             top: 10px;
             left: 10px;
-            background-color: #1f2937;
+            background-color: #25371f;
             color: white;
             border: none;
             padding: 8px 12px;
