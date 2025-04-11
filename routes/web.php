@@ -37,5 +37,11 @@ use App\Http\Controllers\ProveedorController;
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');  // Cambiado 'home' por 'dashboard'
 Route::get('/productos', [ProductosController::class, 'index'])->name('productos');
 Route::get('/notificaciones', [NotificacionesController::class, 'index'])->name('notificaciones');
-Route::get('/ubicaciones', [UbicacionesController::class, 'index'])->name('ubicaciones');
+Route::get('/ubicaciones', function () {
+    abort(404); // Para forzar el error 403
+})->name('ubicaciones');
+
+
 Route::get('/proveedor', [ProveedorController::class, 'index'])->name('proveedor');
+
+Route::get('/proveedor/productos', [ProveedorController::class, 'mostrarProductos']);
