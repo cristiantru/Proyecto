@@ -19,10 +19,11 @@ Route::get('dashboard', function () {
 })->middleware('auth');
 use Illuminate\Support\Facades\Auth;
 
-Route::get('/logout', function () {
+Route::post('/logout', function () {
     Auth::logout();
     return redirect('login');
 })->name('logout');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -36,5 +37,5 @@ use App\Http\Controllers\ProveedorController;
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');  // Cambiado 'home' por 'dashboard'
 Route::get('/productos', [ProductosController::class, 'index'])->name('productos');
 Route::get('/notificaciones', [NotificacionesController::class, 'index'])->name('notificaciones');
-//Route::get('/ubicaciones', [UbicacionesController::class, 'index'])->name('ubicaciones');
+Route::get('/ubicaciones', [UbicacionesController::class, 'index'])->name('ubicaciones');
 Route::get('/proveedor', [ProveedorController::class, 'index'])->name('proveedor');
