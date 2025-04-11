@@ -18,10 +18,10 @@ Breadcrumbs::for('notificaciones', function (BreadcrumbTrail $trail) {
     $trail->push('Notificaciones', route('notificaciones'));
 });
 
-Breadcrumbs::for('ubicaciones', function (BreadcrumbTrail $trail) {
-    $trail->parent('dashboard');  // Cambiamos 'home' por 'dashboard'
+Breadcrumbs::for('ubicaciones', function ($trail) {
     $trail->push('Ubicaciones', route('ubicaciones'));
 });
+
 
 Breadcrumbs::for('proveedor', function (BreadcrumbTrail $trail) {
     $trail->parent('dashboard');  // Cambiamos 'home' por 'dashboard'
